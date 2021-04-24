@@ -67,6 +67,13 @@ _________________________________
 
 <h2>COMANDOS:</h2>
 
+<p>
+NOTA:
+si hiciste commit y alteraste un archivo que quieres guardar u hiciste otra accion tienes que repetir el proceso haciendo:
+git add .
+git commit -m "Newmessage"
+</p>
+
 <h3>git commit -m "message"</h3>
 
 <p>
