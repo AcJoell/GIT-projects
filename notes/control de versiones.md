@@ -42,7 +42,8 @@ Muestra todos los cambios hechos, incluyendo lineas de archivo cambiados, cuando
 <h3>git log <name></h3>
 
 <p>
-Ver la historia completad e un archivo
+Ver la historia completa de un archivo
+Muestra todos los commits
 </p>
 
 <h3>git push</h3>

@@ -60,6 +60,7 @@ Sacar un archivo el cual agregaste (mediante git add)
 <p>
 Se quita el add del archivo, cuando ponemos el cached significa que esta en RAM, aun no se ha guardado en la DB
 </p>
+
 _________________________________
 
 <h1> HACIENDO TU PRIMET COMMIT </h1>
@@ -79,3 +80,10 @@ git commit -m "Newmessage"
 <p>
 Te envia el mensaje escrito dentro de las comillas a la hora de guardar los cambios en el repositorio remoto
 </p>
+
+<h3>git diff numLargoDelCommit1 numLargoDelCommit2</h3>
+
+<p>
+Sirve para comparar los cambios hechos entre commits
+</p>
+
