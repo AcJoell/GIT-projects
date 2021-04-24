@@ -37,10 +37,16 @@ _________________________________
 
 <h2>COMANDOS:</h2>
 
+<p>
+NOTA:
+al hacer git add . el archivo esta en estado STAGING
+al hacer git commit -m "" el archivo se va al repositorio MASTER 
+</p>
+
 <h3>git init</h3>
 
 <p>
-Se inicia el repositorio vacio
+Se crea un area en memoria RAM llamada STAGING donde vas a agregar los cambios y se crea el repositorio que es la carpeta .git (carpeta oculta)
 </p>
 
 <h3>git add .</h3>
@@ -81,7 +87,7 @@ git commit -m "Newmessage"
 Te envia el mensaje escrito dentro de las comillas a la hora de guardar los cambios en el repositorio remoto
 </p>
 
-<h3>git diff numLargoDelCommit1 numLargoDelCommit2</h3>
+<h3>git diff numLargoDelCommit1 numLargoDelCommit2 (indicador del commit)</h3>
 
 <p>
 Sirve para comparar los cambios hechos entre commits
