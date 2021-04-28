@@ -35,3 +35,17 @@ _________________________________
 <p>
 Te envia el mensaje escrito dentro de las comillas a la hora de guardar los cambios en el repositorio remoto
 </p>
+
+<h3>git reset || git reset --hard  || git reset --soft</h3>
+
+<p>
+Nos permite volver a un commit anterior
+--hard es el mas peligroso pero el que mas se usa
+--soft volvemos a la version anterior, pero lo que tengamos en staying (add) sigue ahi para el proximo commit aunque vuelva a la version anterior
+</p>
+
+<h3>git diff</h3>
+
+<p>
+Nos muestra los cambios que no han sido agregados en el staying (add) todavia.
+</p>
