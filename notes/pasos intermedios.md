@@ -49,3 +49,9 @@ Nos permite volver a un commit anterior
 <p>
 Nos muestra los cambios que no han sido agregados en el staying (add) todavia.
 </p>
+
+<h3>git diff</h3>
+
+<p>
+Nos muestra los cambios que no han sido agregados en el staying (add) todavia.
+</p>
