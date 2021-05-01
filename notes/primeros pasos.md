@@ -1,95 +1,139 @@
-_________________________________
+> GIT: Es un sistema de control de versiones, donde se guardan cambios dejando claro donde occurrieron, cuando ocurrieron, quien los hizo y volver a esa version pasada.
+#
+#
+- - -
+# CONFIGURANDO GIT POR PRIMERA VEZ
+- - -
 
-<h1> CREANDO UN REPOSITORIO </h1>
-_________________________________
+### NOTAS
+> (-) usas letras (l, a)
+> (--) usas palabras (global)
 
-<h2>COMANDOS:</h2>
+### COMANDOS
+##### 1. Encontrar todas las configuraciones de git
+#
+#
+```sh
+git config || git config --list || git config --list --show --origin
+```
+- git config permite obtener y establecer variables de configuración
+- --list para mostrar todas las propiedades que Git y tu han configurado
+- --list --show --origin muestra la ubicacion de las configuraciones guardadas
 
-<p>
-NOTA:
-- usas letras (l, a)
--- usas palabras (global)
-</p>
+##### 2. Configura tu nombre para que cualquier colaborador o tu lo puedan ver
+#
+#
+```sh
+git config --global user.name "Your Name" |or| user.email "user@example.com"
+```
+- user.name  "..." para establecer tu nombre de usuario
+- user.email  "..." para establecer tu correo electronico
 
-<h3>git config || git config --list || git config --list --show --origin</h3>
+#
+#
 
-<p>
-Encontraras todas las configuraciones de git
---list veras la configuracion por defecto de tu git y las cosas que te faltan
---list --show --origin muestra donde se encuentran las configuraciones guardadas
-</p>
+- - -
+# CREANDO UN REPOSITORIO
+- - -
 
-<h3>git config --global user.name "Your Name"</h3>
+### NOTA:
+> ( GIT ADD . ) al ejecutarlo el archivo esta en estado STAGING
+> ( GIT COMMIT -M "..." ) al ejecutarlo el archivo se va al repositorio local 
 
-<p>
-Configura tu nombre para que cualquier colaborador o tu lo puedan ver
-</p>
+### COMANDOS:
 
-<h3>git config --global user.email "user@example.com"</h3>
+##### 1. Crear repositorio local
+#
+#
+```sh
+git init
+```
+Crearas un repositorio en tu carpeta, es decir, una base de datos en donde se van a guardar los cambios de tus archivos, junto con una carpeta .git (carpeta oculta)
 
-<p>
-Configura tu correo
-</p>
-_________________________________
+##### 2. Archivo en estado staging (area de preparacion)
+#
+#
+```sh
+git add name.txt || git add .
+```
+- git add agregar tu archivo dando un seguimiento a este (Staging)
+- . agrega todos tus archivos nuevos o con algun cambio
 
-<h1> CREANDO UN REPOSITORIO </h1>
-_________________________________
+##### 3. Eliminar archivo o deshacer git add .
+#
+#
+```sh
+git rm name.txt || git rm --cached name.txt
+```
+- git rm sirve para eliminar un archivo
+- --cached significa que esta en RAM y podemos quitarle el seguimiento a nuestro archivo
 
-<h2>COMANDOS:</h2>
+#
+#
+- - -
+# HACIENDO TU PRIMET COMMIT
+- - -
+### NOTA:
+> si hiciste commit y alteraste un archivo que quieres guardar o hiciste otra accion tienes que repetir el proceso haciendo:
+> git add .
+> git commit -m "Newmessage"
 
-<p>
-NOTA:
-al hacer git add . el archivo esta en estado STAGING
-al hacer git commit -m "" el archivo se va al repositorio MASTER 
-</p>
+### COMANDOS:
 
-<h3>git init</h3>
+#### 1. Subiendo un commit
+#
+```sh
+git commit -m "message"
+```
+Envia los ultimos cambios del archivo y un mensaje respectivo a la base de datos del sistemas de control de versiones.
 
-<p>
-Se crea un area en memoria RAM llamada STAGING donde vas a agregar los cambios y se crea el repositorio que es la carpeta .git (carpeta oculta)
-</p>
+#### 2. Diferenciando commits
+#
+```sh
+git diff numLargoDelCommit1 numLargoDelCommit2 (indicador del commit)
+```
+Sirve para comparar los cambios hechos entre commits. El texto largo es el indicador del commit que se crea al subir un commit al repositorio.
+#
+- - -
+# OTROS
+- - -
+### COMANDOS:
+> CC
+> SS
+> AA
 
-<h3>git add .</h3>
+#### 1. Observar el estado de tu repositorio local
+#
+```sh
+git status
+```
+Ver el status de la base de datos (repositorio local) asi como tus cambios añadidos
 
-<p>
-Agregamos todos los archivos nuevos o alterados
-</p>
+#### 2. Observar el estado de tus archivos completamente
+#
+```sh
+git show name (optional)
+```
+Muestra el estado del directorio de trabajo y del área del entorno de ensayo
+Permite ver:
+- estado del directorio
+- estado del entorno de ensayo
+- cambios en Staging
+- cambios sin seguimiento
+- cuando se cambiaron
+- quien las cambio
 
-<h3>git rm name.txt</h3>
+#### 3. Observar la historia de tus archivos, recorrido por commits
+#
+```sh
+git log name
+```
+Ver la historia completa de un archivo. Muestra todos los commits y su informacion.
 
-<p>
-Sacar un archivo el cual agregaste (mediante git add)
-</p>
-
-<h3>git rm --cached name.txt</h3>
-
-<p>
-Se quita el add del archivo, cuando ponemos el cached significa que esta en RAM, aun no se ha guardado en la DB
-</p>
-
-_________________________________
-
-<h1> HACIENDO TU PRIMET COMMIT </h1>
-_________________________________
-
-<h2>COMANDOS:</h2>
-
-<p>
-NOTA:
-si hiciste commit y alteraste un archivo que quieres guardar u hiciste otra accion tienes que repetir el proceso haciendo:
-git add .
-git commit -m "Newmessage"
-</p>
-
-<h3>git commit -m "message"</h3>
-
-<p>
-Te envia el mensaje escrito dentro de las comillas a la hora de guardar los cambios en el repositorio remoto
-</p>
-
-<h3>git diff numLargoDelCommit1 numLargoDelCommit2 (indicador del commit)</h3>
-
-<p>
-Sirve para comparar los cambios hechos entre commits
-</p>
-
+#### 4. Subir tu repositorio local a uno remoto
+#
+```sh
+git push
+```
+- Permite enviar a un repositorio remoto (en linea) lo que estas haciendo localmente
+- Permite traer una version de un commit o archivo de un repositorio remoto (en linea)

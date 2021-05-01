@@ -1,105 +1,97 @@
-<h1> CODIGOS DE LINEA DE COMANDO </h1>
-_________________________________
+- - -
+# CODIGOS DE LA LINEA DE COMANDO
+- - -
 
-<h2>COMANDOS:</h2>
-
-<h3>pwd</h3>
-
-<p>
+### COMANDOS
+##### 1. Ubicandote en tu pc
+#
+```sh
+pwd
+```
 Te mostrara en que carpeta estas en tu pc ahora mismo
-</p>
+#
+##### 2. Navegando por tu pc I
+#
+```sh
+cd || cd . || cd .. || cd ../../
+```
+`Son DOS puntos SIN espacios`
+- cd : Navegar por la linea de comando
+- cd . Es la carpeta actual (no te lleva a ningun lado)
+- cd . . Te devuelve una carpeta
+- cd . ./. ./ Te devuelve dos carpetas
 
-<h3>cd</h3>
+#
+##### 2. Navegando por tu pc II
+#
 
-<p>
-Navegar por la linea de comando
-</p>
+```sh
+cd name || cd (letra) || cd / || cd /c
+```
+- cd name : Entrar a una nueva carpeta
+- cd u : Te muestra los archivos y carpetas que comienzan por u (o cualquier letra)
+- cd / : Te lleva al home
+- cd /c : Sirve para acceder a otro disco duro
 
-<h3>cd /</h3>
+#
 
-<p>
-Te lleva al home
-</p>
+##### 3. Creando una carpeta
+#
+#
+```sh
+mkdir name
+```
+Sirve para crear una carpeta
 
-<h3>ls</h3>
+#
+#### 4. Creando un archivo
+#
+```sh
+touch name.txt
+```
+Sirve para crear un archivo vacio
 
-<p>
-Listar los archivos que tenemos en ese momento
-</p>
+#
+##### 5. Listando archivos
+#
+```sh
+ls || ls -al || ls -l  || ls -a
+```
+- ls : Sirve para listar los archivos que tenemos en ese momento
+- -a : Muestra los archivos ocultos listados
+- -l : Muestra los archivos visibles listados
+- -al : Muestra todos los archivos incluso los ocultos
 
-<h3>ls -al || ls -l  || ls -a</h3>
+#
+##### 6. Limpiando tu consola
+#
 
-<p>
-(argumento) -al muestra todos los archivos incluso los ocultos y los muestre en lista.
-(argumento) -l muestra los archivos visibles listados
-(argumento) -a muestra los archivos ocultos listados
-</p>
+```sh
+clear || Ctrl + l
+```
+Deja limpia tu consola
 
-<h3>clear || Ctrl + l</h3>
+#
+#### 7. Viendo el contenido de un archivo
+#
+```sh
+cat name.txt
+```
+Te muestra el contenido de un archivo
 
-<p>
-Limpia la consola
-</p>
+#
+#### 8. Historial de comandos
+#
+```sh
+history
+```
+Ver historia completa de todos los comandos hechos por consola
 
-<h3>cd /c (d, e o disco-2)</h3>
-
-<p>
-Sirve para acceder a otro disco duro
-</p>
-
-<h3>cd . || cd .. || cd ../../</h3>
-
-<p>
-cd . es la carpeta actual (no te lleva a ningun lado)
-cd .. te devuelve una carpeta
-cd ../../ te devuelve dos carpetas
-</p>
-
-<h3>cd (una letra)</h3>
-
-<p>
-cd u te muestra los archivos y carpetas que comienzan por u
-</p>
-
-<h3>mkdir name</h3>
-
-<p>
-sirve para crear una carpeta
-</p>
-
-<h3>cd name || cd name/folder/archivo</h3>
-
-<p>
-entrar a una nueva carpeta
-</p>
-
-<h3>touch name.txt</h3>
-
-<p>
-sirve para crear un archivo vacio
-</p>
-
-<h3>cat name.txt</h3>
-
-<p>
-te muestra el contenido de un archivo
-</p>
-
-<h3>history</h3>
-
-<p>
-ver historia completa de todos los comandos hechos
-</p>
-
-<h3>rm name.txt</h3>
-
-<p>
-sirve para borrar un archivo
-ESCRIBIR BIEN EL CODIGO O SE PUEDE ELIMINAR EL DISCO DURO
-</p>
-
-<h3>rm --help</h3>
-
-<p>
-te muestra como funcionan todos los comandos
-</p>
+#### 9. Eliminando un archivo
+#
+`ESCRIBIR BIEN EL CODIGO O PUEDE LLEGAR A ELIMINAR EL DISCO DURO`
+```sh
+rm name.txt || rm --help
+```
+- rm name.txt : Sirve para borrar un archivo
+- --help : Te muestra como funcionan todos los comandos (en este caso rm)
